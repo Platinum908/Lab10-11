@@ -8,9 +8,6 @@ using System.Windows.Controls;
 
 namespace Lab10_11
 {
-    /// <summary>
-    /// Логика взаимодействия для Lab10.xaml
-    /// </summary>
     public partial class Lab10 : Page
     {
         private string fileName;
