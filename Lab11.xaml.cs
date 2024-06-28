@@ -20,16 +20,13 @@ namespace Lab10_11
         {
             try
             {
-                // Считываем числа из TextBox
                 string[] inputNumbers = InputTextBox.Text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 int[] numbers = inputNumbers.Select(int.Parse).ToArray();
 
-                // Записываем числа в бинарный файл
                 WriteNumbersToFile(numbers);
                 string beforeText = "Числа до изменения: " + String.Join(", ", numbers);
                 BeforeChangeText.Text = beforeText;
 
-                // Читаем и удваиваем числа из файла
                 int[] modifiedNumbers = ReadAndModifyNumbers();
                 string afterText = "Числа после изменения: " + String.Join(", ", modifiedNumbers);
                 AfterChangeText.Text = afterText;
